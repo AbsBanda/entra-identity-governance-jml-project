@@ -71,7 +71,7 @@ Created a Microsoft Entra ID security group named:
 `SG-Temporary-Contractors`
 
 The group was configured as a Security group with Assigned membership. This demonstrates group-based identity lifecycle management instead of assigning permissions individually to each user.
-
+![Lifecycle Security Group](01-security-group-created.png)
 ### Step 2 — Provision a Test Contractor (Joiner)
 
 Created a new Microsoft Entra ID user:
@@ -85,7 +85,7 @@ The contractor was added to:
 `SG-Temporary-Contractors`
 
 This demonstrates the Joiner stage of the identity lifecycle and the use of group membership to manage access.
-
+![Test Contractor Group Membership](02-contractor-group-membership.png)
 ### Step 3 — Create a Test Enterprise Application
 
 Created a non-gallery Enterprise Application named:
@@ -93,7 +93,7 @@ Created a non-gallery Enterprise Application named:
 `OmniCorp-Contractor-App`
 
 The application was created to simulate a corporate application that contractors would need to access.
-
+![Test Contractor Before Offboarding](03-test-contractor-before-offboarding.png)
 ### Step 4 — Attempt Group-Based Application Assignment
 
 An attempt was made to assign `SG-Temporary-Contractors` to the `OmniCorp-Contractor-App`.
@@ -103,7 +103,7 @@ The Microsoft Entra tenant reported that groups were not available for assignmen
 Because of this tenant licensing limitation, direct group assignment to the Enterprise Application could not be completed.
 
 The security group and contractor membership were successfully configured, and the licensing restriction was documented as part of the lab evidence.
-
+![Test Contractor Account Disabled](04-test-contractor-account-disabled.png)
 ### Step 5 — Execute Contractor Offboarding (Leaver)
 
 To simulate the end of the contractor's lifecycle, the `Test Contractor` account was disabled in Microsoft Entra ID.
